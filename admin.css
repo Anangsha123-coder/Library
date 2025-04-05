@@ -1,0 +1,140 @@
+/* admin.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.login-prompt, .admin-container {
+  max-width: 700px;
+  margin: 5% auto;
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.login-prompt input[type="password"] {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.login-prompt button {
+  padding: 1rem 2rem;
+  background: #4e54c8;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.section {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #2a2a2a;
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  width: calc(50% - 1rem);
+  padding: 0.8rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  background: #4e54c8;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #3b3fc0;
+}
+
+.danger button {
+  background: #e53935;
+}
+
+.danger button:hover {
+  background: #d32f2f;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #4fc3f7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+#bookList .book-item {
+  padding: 0.5rem;
+  background: #333;
+  border-radius: 6px;
+  margin: 0.5rem 0;
+}
+
+#bookList .book-item button {
+  margin-left: 1rem;
+}
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.6s ease-out forwards;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+button {
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Apply effects to key elements */
+.login-prompt, .admin-container {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.section {
+  animation: slideIn 0.6s ease forwards;
+}

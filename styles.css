@@ -1,0 +1,175 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bg-gradient: linear-gradient(-45deg, #fceabb, #f8b500, #ffdd00, #ffe29f);
+  --text-color: #333;
+  --card-bg: rgba(255, 255, 255, 0.12);
+  --button-bg: #f8b500;
+  --button-hover: #ff9800;
+  --taken-bg: #4caf50;
+  --taken-text: #fff;
+}
+
+body.dark-mode {
+  --bg-gradient: linear-gradient(-45deg, #2c3e50, #34495e, #1e272e, #485563);
+  --text-color: #fff;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --button-bg: #ffe082;
+  --button-hover: #ffc107;
+  --taken-bg: #81c784;
+}
+
+body {
+  background: var(--bg-gradient);
+  background-size: 400% 400%;
+  animation: wave 12s ease infinite;
+  color: var(--text-color);
+  padding-top: 80px;
+  overflow-x: hidden;
+}
+
+@keyframes wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+#modeToggle {
+  background: var(--button-bg);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#modeToggle:hover {
+  background: var(--button-hover);
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.book-item {
+  background: var(--card-bg);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.book-info {
+  font-size: 1.3rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+input[type="date"] {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: var(--button-bg);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: var(--button-hover);
+}
+
+button.taken {
+  background: var(--taken-bg);
+  color: var(--taken-text);
+  cursor: default;
+}
+/* Navbar Styles - Make Text Bold */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold; /* 👈 This makes all text bold */
+}
+
+.navbar h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.nav-links a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold; /* 👈 Bold for nav links */
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff9800;
+}

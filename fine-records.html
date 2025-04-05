@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fine Records</title>
+  <link rel="stylesheet" href="fine-records.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <h2>📚 College Library</h2>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="fine-records.html">Fine Records</a>
+      <a href="admin.html">Admin Panel</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>📄 Fine Records</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Book</th>
+          <th>Checked On</th>
+          <th>Days Late</th>
+          <th>Fine (₹)</th>
+        </tr>
+      </thead>
+      <tbody id="fineTableBody">
+        <!-- Fine rows will go here -->
+      </tbody>
+    </table>
+    <button id="clearFines">🗑️ Clear Fine History</button>
+  </div>
+
+  <script src="fine-records.js"></script>
+</body>
+</html>
+
